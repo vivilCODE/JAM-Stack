@@ -7,6 +7,7 @@ import { fetchEntries } from '../util/contentfulProduct'
 import Product from '../components/product'
 
 export default function Home({ products }) {
+  console.log()
   return (
     <div className="container">
       <Head>
@@ -15,15 +16,15 @@ export default function Home({ products }) {
       </Head>
 
       <main>
-        <Header />
+        {/* <Header /> */}
         <div className="posts">
           {products.map((p) => {
-            return <Post key={p.date} date={p.date} image={p.image.fields} title={p.title} />
+            return <Product key={p.date} date={p.date} image={p.image.fields} title={p.title} />
           })}
         </div>
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
 
       <style jsx>{`
         .container {
