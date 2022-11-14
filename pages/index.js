@@ -7,6 +7,7 @@ import { fetchEntries } from '../util/contentfulProduct'
 import Product from '../components/Product'
 
 
+
 export default function Home({ products }) {
   console.log(products)
   return (
