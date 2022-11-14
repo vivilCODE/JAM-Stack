@@ -1,10 +1,10 @@
 import Head from 'next/head'
 
-import { fetchEntries } from '@util/contentfulProduct'
+import { fetchEntries } from '../util/contentfulProduct'
 
 // import Header from '@components/Header'
 // import Footer from '@components/Footer'
-import Product from '@components/product'
+import Product from '../components/Product/Index'
 
 export default function Home({ products }) {
   console.log()
