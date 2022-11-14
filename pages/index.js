@@ -23,6 +23,7 @@ export default function Home({ products }) {
           })}
         </div>
       </main>
+      
 
       {/* <Footer /> */}
 
