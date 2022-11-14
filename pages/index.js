@@ -7,7 +7,7 @@ import { fetchEntries } from '../util/contentfulProduct'
 import Product from '../components/Product/Index'
 
 export default function Home({ products }) {
-  console.log()
+  console.log(products)
   return (
     <div className="container">
       <Head>
