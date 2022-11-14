@@ -6,6 +6,7 @@ import { fetchEntries } from '../util/contentfulProduct'
 // import Footer from '@components/Footer'
 import Product from '../components/Product'
 
+
 export default function Home({ products }) {
   console.log(products)
   return (
