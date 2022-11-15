@@ -1,17 +1,33 @@
-import React from 'react'
+import React from 'react';
+import { fetchEntries } from '../../util/contentfulProduct';
+import Product from '../../components/Product';
 
 export async function getStaticPaths() {
-  const paths = getAllPostIds();
+  const res = await fetchEntries();
+  const paths = res.map(product => {
+    return {
+      params: { id: product.fields.id.toString()},
+    };
+  });
   return {
     paths,
     fallback: false,
   };
 }
+export async function getStaticProps(context) {
+  const {id} = context.params;
+  const res = await fetchEntries()
+  const product = res.find((p) => p.fields.id.toString() === id)
 
-const [id] = () => {
-  return (
-    <div>[id]</div>
-  )
+  return {
+    props: {
+      product,
+    },
+  }
 }
 
-export default [id]
+const id = ({product}) => {
+  return <Product product={product}/>
+};
+
+export default id;

@@ -2,17 +2,22 @@ import React from 'react';
 import Link from 'next/link';
 import { fetchEntries } from '../../util/contentfulProduct';
 
-const index = ({products}) => {
+const index = ({ products }) => {
   return (
-    <main>  
+    <main>
       <div className="posts">
         <h1>Product list</h1>
         <ul>
-          {products.map((p, index) => {
-            return (
-              <Link key={index} href={`/products/${index + 1}`}>{p.title}</Link>
-            );
-          })}
+          {products
+            .sort((a, b) => a.id - b.id)
+            .map((p, index) => {
+              // console.log('product id=======>',p.id)
+              return (
+                <li key={p.id}>
+                  <Link href={`/products/${p.id}`}>{p.title}</Link>
+                </li>
+              );
+            })}
         </ul>
       </div>
     </main>
@@ -20,16 +25,16 @@ const index = ({products}) => {
 };
 
 export async function getStaticProps() {
-    const res = await fetchEntries()
-    const products = await res.map((p) => {
-      return p.fields
-    })
-  
-    return {
-      props: {
-        products,
-      },
-    }
-  }
+  const res = await fetchEntries();
+  const products = await res.map(p => {
+    return p.fields;
+  });
+
+  return {
+    props: {
+      products,
+    },
+  };
+}
 
 export default index;
