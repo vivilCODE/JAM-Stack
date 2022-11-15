@@ -5,7 +5,7 @@ const stockSchema = new mongoose.Schema({
     productId: String,
 })
 
-const uri = process.env.NEXT_PUBLIC_MONGO_ACCESS_KEY;
+const uri = 'mongodb+srv://ville:viljanen@cluster0.cq1qjhv.mongodb.net/?retryWrites=true&w=majority';
 
 const Stock = mongoose.models.Stock || mongoose.model('Stock', stockSchema);
 
