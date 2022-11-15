@@ -14,10 +14,16 @@ export async function getStaticPaths() {
     fallback: false,
   };
 }
+
 export async function getStaticProps(context) {
+    console.log(context)
   const {id} = context.params;
   const res = await fetchEntries()
   const product = res.find((p) => p.fields.id.toString() === id)
+  const response = await fetch(`https://gilded-brioche-df9df0.netlify.app/api/products/${id}`);
+  const data = await response.json();
+  console.log(data)
+
 
   return {
     props: {
@@ -26,8 +32,9 @@ export async function getStaticProps(context) {
   }
 }
 
-const id = ({product}) => {
+const product = ({product}) => {
+    
   return <Product product={product}/>
 };
 
-export default id;
+export default product;
