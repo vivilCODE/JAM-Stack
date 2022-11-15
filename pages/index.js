@@ -6,26 +6,13 @@ import { fetchEntries } from '../util/contentfulProduct'
 // import Footer from '@components/Footer'
 import Product from '../components/Product'
 
-
-
 export default function Home({ products }) {
-  console.log(products)
   return (
     <div className="container">
       <Head>
         <title>Next + Contentful Starter</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main>
-        {/* <Header /> */}
-        <div className="posts">
-          {products.map((p) => {
-            return <Product key={p.date} date={p.date} image={p.image.fields} title={p.title} />
-          })}
-        </div>
-      </main>
-
 
       {/* <Footer /> */}
 
@@ -64,17 +51,4 @@ export default function Home({ products }) {
       `}</style>
     </div>
   )
-}
-
-export async function getStaticProps() {
-  const res = await fetchEntries()
-  const products = await res.map((p) => {
-    return p.fields
-  })
-
-  return {
-    props: {
-      products,
-    },
-  }
 }
