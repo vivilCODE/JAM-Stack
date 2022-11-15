@@ -10,8 +10,7 @@ const index = ({ products }) => {
       <div className="posts">
         <h1>Product list</h1>
         <ul>
-          {products
-            .sort((a, b) => a.id - b.id)
+          {products?.sort((a, b) => a.id - b.id)
             .map((p, index) => {
               // console.log('product id=======>',p.id)
               return (

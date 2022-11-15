@@ -1,5 +1,14 @@
-function Product({ product, qty }) {
-  console.log(product);
+import {useEffect, useState} from 'react';
+
+function Product({ product }) {
+  const [qty, setQty] = useState();
+
+  useEffect(() => {
+
+    fetch(`/api/products/${product.fields.id}`)
+      .then(res => res.json()).then(data => setQty(data))
+  }, [])
+
   const src = product.fields.image.fields.file.url;
   const {title, price} = product.fields;
 
