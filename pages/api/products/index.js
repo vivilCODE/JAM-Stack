@@ -1,17 +1,5 @@
 import Stock from '../model';
 import mongoose from 'mongoose'
-const uri = process.env.NEXT_PUBLIC_MONGO_ACCESS_KEY;
-
-async function connect() {
-  try {
-    await mongoose.connect(uri);
-    console.log('Connected to MongoDB');
-  } catch (error) {
-    console.error(error);
-  }
-}
-
-connect();
 
 export default async function handler(req, res) {
   console.log(req.url)
