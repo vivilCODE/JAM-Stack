@@ -1,8 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 import { fetchEntries } from '../../util/contentfulProduct';
+// import { useRouter } from 'next/router';
 
 const index = ({ products }) => {
+
   return (
     <main>
       <div className="posts">
@@ -22,6 +24,7 @@ const index = ({ products }) => {
       </div>
     </main>
   );
+
 };
 
 export async function getStaticProps() {

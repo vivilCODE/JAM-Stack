@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const stockSchema = new mongoose.Schema({
     quantity: Number,
-    id: Number
+    productId: String,
 })
 
 const uri = process.env.NEXT_PUBLIC_MONGO_ACCESS_KEY;
