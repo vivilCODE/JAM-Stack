@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "tags": []
+    },
+    "sys": {
+        "space": {
+            "sys": {
+                "type": "Link",
+                "linkType": "Space",
+                "id": "ae6xn1hg9vn1"
+            }
+        },
+        "id": "4jkHxnquVnt6mV3PPFBYWC",
+        "type": "Entry",
+        "createdAt": "2022-11-16T10:28:50.839Z",
+        "updatedAt": "2022-11-16T10:28:50.839Z",
+        "environment": {
+            "sys": {
+                "id": "master",
+                "type": "Link",
+                "linkType": "Environment"
+            }
+        },
+        "revision": 1,
+        "contentType": {
+            "sys": {
+                "type": "Link",
+                "linkType": "ContentType",
+                "id": "products"
+            }
+        },
+        "locale": "en-US"
+    },
+    "fields": {
+        "title": "Test video",
+        "image": {
+            "metadata": {
+                "tags": []
+            },
+            "sys": {
+                "space": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Space",
+                        "id": "ae6xn1hg9vn1"
+                    }
+                },
+                "id": "7LB3MJmXrx2iuL99JOZ7LW",
+                "type": "Asset",
+                "createdAt": "2022-11-16T10:28:32.431Z",
+                "updatedAt": "2022-11-16T10:28:32.431Z",
+                "environment": {
+                    "sys": {
+                        "id": "master",
+                        "type": "Link",
+                        "linkType": "Environment"
+                    }
+                },
+                "revision": 1,
+                "locale": "en-US"
+            },
+            "fields": {
+                "title": "Test recording",
+                "description": "",
+                "file": {
+                    "url": "//videos.ctfassets.net/ae6xn1hg9vn1/7LB3MJmXrx2iuL99JOZ7LW/4afca75e7b9a0e6ddfa8ca05b8aa31ee/recording-Nov_16__2022__11_28_AM.mp4",
+                    "details": {
+                        "size": 4892652
+                    },
+                    "fileName": "recording-Nov 16, 2022, 11:28 AM.mp4",
+                    "contentType": "video/mp4"
+                }
+            }
+        },
+        "price": 9439489342,
+        "id": 4
+    }
+}
